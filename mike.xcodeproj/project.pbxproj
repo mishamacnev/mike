@@ -15,6 +15,11 @@
 		1960094228D236B100494788 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1960094028D236B100494788 /* LaunchScreen.storyboard */; };
 		1960096728D239B100494788 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1960096628D239B100494788 /* Coordinator.swift */; };
 		1960096A28D23BA700494788 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1960096928D23BA700494788 /* CoordinatorTests.swift */; };
+		1960096C28D24D7700494788 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1960096B28D24D7700494788 /* AppCoordinator.swift */; };
+		1960096E28D250CF00494788 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1960096D28D250CF00494788 /* MainController.swift */; };
+		1960097028D2511200494788 /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1960096F28D2511200494788 /* AppCoordinatorTests.swift */; };
+		1960097228D251F300494788 /* MainControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1960097128D251F300494788 /* MainControllerTests.swift */; };
+		1960097428D2531E00494788 /* SceneDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1960097328D2531E00494788 /* SceneDelegateTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +44,11 @@
 		1960094828D236B200494788 /* mikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mikeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1960096628D239B100494788 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1960096928D23BA700494788 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
+		1960096B28D24D7700494788 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		1960096D28D250CF00494788 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		1960096F28D2511200494788 /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
+		1960097128D251F300494788 /* MainControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControllerTests.swift; sourceTree = "<group>"; };
+		1960097328D2531E00494788 /* SceneDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				1960096828D23B8200494788 /* CoreLayer */,
+				1960097328D2531E00494788 /* SceneDelegateTests.swift */,
 			);
 			path = mikeTests;
 			sourceTree = "<group>";
@@ -104,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				1960096628D239B100494788 /* Coordinator.swift */,
+				1960096B28D24D7700494788 /* AppCoordinator.swift */,
+				1960096D28D250CF00494788 /* MainController.swift */,
 			);
 			path = CoreLayer;
 			sourceTree = "<group>";
@@ -112,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				1960096928D23BA700494788 /* CoordinatorTests.swift */,
+				1960096F28D2511200494788 /* AppCoordinatorTests.swift */,
+				1960097128D251F300494788 /* MainControllerTests.swift */,
 			);
 			path = CoreLayer;
 			sourceTree = "<group>";
@@ -219,7 +234,9 @@
 			files = (
 				1960096728D239B100494788 /* Coordinator.swift in Sources */,
 				1960093A28D236AF00494788 /* ViewController.swift in Sources */,
+				1960096C28D24D7700494788 /* AppCoordinator.swift in Sources */,
 				1960093628D236AF00494788 /* AppDelegate.swift in Sources */,
+				1960096E28D250CF00494788 /* MainController.swift in Sources */,
 				1960093828D236AF00494788 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,7 +245,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1960097028D2511200494788 /* AppCoordinatorTests.swift in Sources */,
 				1960096A28D23BA700494788 /* CoordinatorTests.swift in Sources */,
+				1960097228D251F300494788 /* MainControllerTests.swift in Sources */,
+				1960097428D2531E00494788 /* SceneDelegateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,9 +468,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mike.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/mike";
 			};
 			name = Debug;
@@ -467,9 +490,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mike.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/mike";
 			};
 			name = Release;
