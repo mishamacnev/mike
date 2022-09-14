@@ -54,7 +54,7 @@ private extension CoordinatorTests {
     }
 }
 
-private class CoordinatorMock: Coordinator {
+private final class CoordinatorMock: Coordinator {
     var startWasCalled: Int = 0
 
     override func start() {
